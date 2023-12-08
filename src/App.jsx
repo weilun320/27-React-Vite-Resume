@@ -12,14 +12,6 @@ function Header() {
           <Contact />
         </div>
       </div>
-      <div className="row">
-        <div className="col-md-6">
-          <Skills />
-        </div>
-        <div className="col-md-6 mt-3 mt-md-0">
-          <PersonalSkills />
-        </div>
-      </div>
     </>
   );
 }
@@ -39,6 +31,22 @@ function Contact() {
       <p className="mb-1"><i className="me-1 text-secondary bi bi-geo-alt-fill"></i>Bay Area, California</p>
       <p className="mb-1"><i className="me-1 text-secondary bi bi-telephone-fill"></i>+1-234-567-890</p>
       <p className="mb-1"><i className="me-1 text-secondary bi bi-envelope-fill"></i>chrisware@gmail.com</p>
+    </>
+  );
+}
+
+function About() {
+  return (
+    <>
+      <p>Software Engineer with over six years of experience in full-stack development and leading product cycle from conception to completion. Guided a team of 5-15 members through 5+ product launches at a recent experience in a high growth technology startup.</p>
+      <div className="row">
+        <div className="col-md-6">
+          <Skills />
+        </div>
+        <div className="col-md-6 mt-3 mt-md-0">
+          <PersonalSkills />
+        </div>
+      </div>
     </>
   );
 }
@@ -145,6 +153,10 @@ function App() {
         <div className="p-3 bg-dark">
           <div className="p-3 p-lg-5 bg-dark-subtle">
             <Header />
+            <div className="mt-5">
+              <h2 className="fw-bold">About Me</h2>
+              <About />
+            </div>
             <div className="mt-5">
               <h2 className="fw-bold">Experience</h2>
               <Experience {...experience1} />
