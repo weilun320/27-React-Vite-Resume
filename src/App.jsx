@@ -79,6 +79,14 @@ function PersonalSkills() {
   );
 }
 
+function Footer() {
+  return (
+    <>
+      <div className="mt-3 text-center text-light">&copy; 2023 Wei Lun. All right reserved.</div>
+    </>
+  );
+}
+
 function App() {
   const experience1 = {
     companyName: "Resume Worded",
@@ -149,6 +157,7 @@ function App() {
               <Education {...education2} />
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     </>
