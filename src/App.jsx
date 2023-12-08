@@ -1,4 +1,5 @@
 import Experience from "./Experience";
+import Education from "./Education";
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
           <Contact />
         </div>
       </div>
-      <div className="row mb-5">
+      <div className="row">
         <div className="col-md-6">
           <Skills />
         </div>
@@ -116,16 +117,37 @@ function App() {
     ]
   };
 
+  const education1 = {
+    schoolName: "San Jose State University",
+    course: "Master of Computer Science",
+    location: "San Jose, CA",
+    period: "2012"
+  };
+
+  const education2 = {
+    schoolName: "Steven Institute of Technology",
+    course: "Bachelor of Computer Science",
+    location: "Hoboken, NJ",
+    period: "2008"
+  };
+
   return (
     <>
       <div className="m-3 m-md-5">
         <div className="p-3 bg-dark">
           <div className="p-3 p-lg-5 bg-dark-subtle">
             <Header />
-            <h2 className="fw-bold">Experience</h2>
-            <Experience {...experience1} />
-            <Experience {...experience2} />
-            <Experience {...experience3} />
+            <div className="mt-5">
+              <h2 className="fw-bold">Experience</h2>
+              <Experience {...experience1} />
+              <Experience {...experience2} />
+              <Experience {...experience3} />
+            </div>
+            <div className="mt-5">
+              <h2 className="fw-bold">Education</h2>
+              <Education {...education1} />
+              <Education {...education2} />
+            </div>
           </div>
         </div>
       </div>
